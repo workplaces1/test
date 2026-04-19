@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import './App.css'
 export default function RecurringPayments() {
   const [surveyData, setsurveyData] = useState({
     title: "Employee Feedback Survey",
