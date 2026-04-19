@@ -36,7 +36,7 @@ export default function RecurringPayments() {
   return (<>
     <div class="row mt-4">
       <div className='col-10 m-auto mt-4 px-5'>
-        <h2 className='text-dark text-center mb-4 text-success'>{surveyData.title}</h2>
+        <h2 className='text-success text-center mb-4'>{surveyData.title}</h2>
         <div className='pt-3'>
           <ul className="mt-3" style={{ listStyleType: "-moz-initial", marginRight: "40px" }}>
             {
