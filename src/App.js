@@ -28,7 +28,7 @@ export default function RecurringPayments() {
     const { name, type, value } = event.target
     setsurveyData(prev => {
       const questions = prev.questions.map(row => {
-        return row.id == name ? { ...row, answer: value } : row
+        return row.id === name ? { ...row, answer: value } : row
       })
       return { ...prev, questions }
     })
@@ -46,9 +46,9 @@ export default function RecurringPayments() {
                   ['radio', 'checkbox'].includes(row.type) ?
                     row.options.map((op, oInd) => (<div className='mb-2'><input className="me-2 from-checkbox" type={row.type} value={op} name={row.id} onChange={getInput} />{op}</div>))
                     :
-                    row.type == 'textarea' ?
+                    row.type === 'textarea' ?
                       <textarea className='form-control' name={row.id} key={qInd} onChange={getInput} placeholder='Enter answer' minLength={100} />
-                      : row.type == 'multiselect' ?
+                      : row.type === 'multiselect' ?
                         <select className='form-select' name={row.id} key={qInd} onChange={getInput}>
                           {
                             row.options.map((op, oInd) => (<option>{op}</option>))
